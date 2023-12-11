@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Welcome to our site{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div align="center">
+<a href="/xss" class="a_demo_five"> Leave a comment </a>
+<p>
+<a href="/sqli" class="a_demo_five"> Visit your Profile (if authorized) </a>
+<p>
+<a href="/bruteforce" class="a_demo_five"> Sign in </a>
+<p>
+<a href="/idor" class="a_demo_five"> View your secret (if authorized) </a>
+<p>
+<a href="/osci" class="a_demo_five"> Read about our company </a>
+<p>
+<a href="/path_traversal" class="a_demo_five"> Read about our strategy</a>
+<p>
+<a href="/registration" class="a_demo_five"> Register</a>
+</div>
+{% endblock %}

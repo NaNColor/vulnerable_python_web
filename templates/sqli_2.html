@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %} The secret information about you {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div align="center">
+{%for x in information%}
+<p>{{x}}</p>
+{%endfor%}
+</div>
+{% endblock %}

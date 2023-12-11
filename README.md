@@ -1,5 +1,7 @@
 ### Инструкция по сборке и запуску приложения
 > В этом разделе нужно описать пререквизиты и примеры запуска
+sudo apt install python3-flask
+FLASK_APP=webapp.py FLASK_DEBUG=1 flask run 
 
 ...
 

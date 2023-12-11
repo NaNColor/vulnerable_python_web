@@ -1,0 +1,88 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - unsecure</title>
+<style>
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, p {
+  text-align: center;
+}
+input {
+  margin: 0.25em 0em 1em 0em;
+  outline: none;
+  padding: 0.5em;
+  border: none;
+  background-color: rgb(225, 225, 225);
+  border-radius: 0.25em;
+  color: black;
+}
+
+button {
+  padding: 0.75em;
+  border: none;
+  outline: none;
+  background-color: rgb(68, 18, 232);
+  color: white;
+  border-radius: 0.25em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(41, 4, 164);
+}
+
+.a_demo_five {
+  background-color:#5b5bf0;
+  width:200px;
+  display:inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size:12px;
+  text-decoration:none;
+  color:#fff;
+  position:relative;
+  margin-top:20px;
+  padding-bottom:10px;
+  padding-top:10px;
+  background-image: linear-gradient(bottom, rgb(91, 91, 240) 100%, rgb(14, 14, 237) 0%);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: inset 0px 1px 0px #ca73f8, 0px 5px 0px 0px #8787ed, 0px 10px 5px #999;
+}
+
+.a_demo_five:active {
+  top:3px;
+  background-image: linear-gradient(bottom, rgb(168,48,232) 0%, rgb(141,32,196) 100%);
+  box-shadow: inset 0px 4px 1px #ca73f8 0px 2px 0px 0px #8787ed, 0px 5px 3px #999;
+}
+
+.a_demo_five:active::before {
+  top: -33px;
+  box-shadow: 0px 3px 0px #ca73f8;
+}
+.flash {
+  background-color:#aa0000;
+  width:100%;
+}
+
+</style>
+<nav>
+<a href="/" class="a_demo_five"> Main page</a>
+</nav>
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
