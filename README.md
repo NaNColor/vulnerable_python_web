@@ -1,7 +1,25 @@
 ### Инструкция по сборке и запуску приложения
 > В этом разделе нужно описать пререквизиты и примеры запуска
+Для запуска данного веб приложения необходим `python3-flask`, который устанавливается с помощью команды
+
 sudo apt install python3-flask
-FLASK_APP=webapp.py FLASK_DEBUG=1 flask run 
+
+Чтобы скачать приложение необходимо склонировать репозиторий
+
+`git clone https://github.com/Rosamon/vulnerable_python_web.git && cd vulnerable_python_web`
+
+
+Далее необходимо использовать виртуальную среду
+
+`python -m venv env && source ./env/bin/activate`
+
+Скачать необходимые библиотеки из файла requirements.txt
+
+pip install -r requirements.txt
+
+Затем стоит запустить приложение через команду flask
+
+`FLASK_APP=webapp.py FLASK_DEBUG=1 flask run`
 
 ...
 
@@ -14,6 +32,6 @@ FLASK_APP=webapp.py FLASK_DEBUG=1 flask run
 ...
 
 ### Дополнительные комментарии
-> Опциональный раздел
+Можно было бы сделать запуск через файл, но я не имею опыта в запуске таким способом, и когда я начал - появились неотслеживаемые ошибки.
 
 ...
