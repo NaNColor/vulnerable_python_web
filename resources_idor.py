@@ -9,6 +9,7 @@ from flask_login import login_required, current_user
 @login_required
 def redirect_to_page():
     found_id = (UserModel.find_by_username(current_user.username)).id
+    # находим в бд пользователя текущей сессии и переходим на страницу с его id
     return redirect('/idor/'+str(found_id))
 
 @app.route("/idor/<id>")
